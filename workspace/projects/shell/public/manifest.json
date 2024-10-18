@@ -1,0 +1,14 @@
+{
+  "mfe1": {
+    "remoteEntry": "http://localhost:4201/remoteEntry.json",
+    "exposedModule": "./Routes",
+    "routePath": "mfe1",
+    "nameClass": "routes"
+  },
+  "mfe2": {
+    "remoteEntry": "http://localhost:4202/remoteEntry.json",
+    "exposedModule": "./Component",
+    "routePath": "mfe1",
+    "nameClass": "routes"
+  }
+}
