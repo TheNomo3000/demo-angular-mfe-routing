@@ -47,15 +47,13 @@ export class DynamicRoutingService {
     return this.downloadConfigFile().pipe(
       tap((config: DynamicRoutingConfig) => {
         const routes: Routes = [];
-        console.log(config);
 
         Object.keys(config).forEach((key) => {
           const mfe = config[key];
           routes.push(this.buildRouteMicrofrontend(mfe));
         });
-
-        this.router.resetConfig(routes);
-        console.log(this.router.config);
+        console.log([...this.router.config, ...routes]);
+        this.router.resetConfig([...this.router.config, ...routes]);
         return config;
       })
     );
